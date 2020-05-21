@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-Cult</title>
+    <!--CSS BOOTSTRAP 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--CSS PERSONNEL-->
+    <link rel="stylesheet" href="../css/stylesj.css">
+    <!--Map -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- Leaflet-->
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+    <!--script js-->
+    <script src="../jeu/geojs/countries.geojson" type="text/javascript"></script>
+    <script src="../jeu/geojs/quizcomp.geojson" type="text/javascript"></script>
+    <script src = "../jeu/geojs/quiz.js" ></script>
+    <!--Script different de se connecter pour simplifier-->
+    <script src="../jeu/js/page2.js"></script>
+    <!--CSS PERSONNEL-->
+    <link rel="stylesheet" href="../css/stylesj.css">
+</head>
+<body>
+    <!--Barre de navigation Bootsrtap avec modification de l'opacité du background -->
+    <nav class="navbar navbar-expand-md" style="background-color: rgba(31, 31, 31, 0.185);">
+        <!-- Adapatation de la classe bootstrap a nos besoins  -->
+        <ul class="nav" >
+            <li class="nav-item">
+                <a class="nav-link active" href="accueil.html">Acceuil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="jouer.html">Jouer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../connexion/login.php">Se connecter</a>
+            </li>
+        </ul>
+    </nav>   
+    <main>
+        <!--Classe container bootstrap qui contient le jeu/carte-->
+        <div class="container">
+            <div class="row" style="text-align: center;">
+                <button id = "next" class="btn"  style="display: block;margin : auto;"> next </button>
+                <button class="btn " id = "lancer" style="display: block; margin : auto;"> Lancer </button>
+                <button id = "finir" class="btn "  style="display: block;margin : auto;""> finir </button>
+            </div>
+            <div id = "quiz"> </div>
+            <h1>Carte : </h1>
+            <!--Div qui represente la map-->
+            <div id="maDiv" style="width: 800px; height: 600px; margin: auto; border-width:5px;border-style:solid;border-color:rgb(248, 248, 248);"></div>
+            <!--Div le wiki du pays trouver-->
+            <div id ="rep"> </div>
+        </div>
+    </main>
+    
+</body>

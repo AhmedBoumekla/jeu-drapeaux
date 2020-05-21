@@ -1,0 +1,41 @@
+body{
+  background: url(../image/c1b2.jpg);
+  color: white;
+  background-attachment:fixed;
+}
+.container{
+  text-align: center;
+}
+.nav-link{
+    opacity: 1;
+    color: white;
+    text-decoration: none;
+    text-shadow:0px 0px 3px rgba(0,0,0, 0.3);
+}
+
+.nav-link:hover{
+color: currentColor;  
+}
+
+
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: none !important;
+      background-color: transparent;
+    }
+    ::-webkit-scrollbar {
+      width: 10px !important;
+      background: transparent;
+      background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(0,255,222);
+      background: linear-gradient(357deg, rgba(0,255,222,1) 0%, rgba(0,255,162,1) 35%, rgba(0,212,255,0) 100%);
+      
+      border-radius: 28px;
+    }
+
+.photo{
+  width: 100px;
+}
+
+

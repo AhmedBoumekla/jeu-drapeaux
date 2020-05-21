@@ -1,0 +1,506 @@
+var quiz = [
+    {
+        "Continent": "Europe",
+        "Coordonees": "",
+        "quiz" : [{
+                "iso" : "fr",
+                "pays": "France",
+                "img" : "../jeu/country-flags-master/png100px/fr.png", 
+                "coor" : [46.396894, 2.478028],
+                "desc": "La France, pays de l'Europe occidentale, compte des villes médiévales, des villages alpins et des plages. Paris, sa capitale, est célèbre pour ses maisons de mode, ses musées d'art classique, dont celui du Louvre, et ses monuments comme la Tour Eiffel. Le pays est également réputé pour ses vins et sa cuisine raffinée. Les peintures rupestres des grottes de Lascaux, le théâtre romain de Lyon et l'immense château de Versailles témoignent de sa riche histoire. ,population : 66,99 millions (2019)",
+                "photo": "../image/photos/france.jpg"
+            },
+            {
+                "iso":"es",
+                "pays" : "Espagne",
+                "img" : "../jeu/country-flags-master/png100px/es.png",
+                "coor": [40.7808007,-3.9118974],
+                "desc" : "L'Espagne est un pays européen situé sur la péninsule ibérique et comprenant 17 régions autonomes à la géographie et aux cultures diverses. Madrid, la capitale, abrite le palais royal et le musée du Prado, où sont exposées les œuvres d'artistes européens. On peut admirer à Ségovie un château médiéval (l'Alcazar) et un aqueduc romain intact. La capitale de la Catalogne, Barcelone, se caractérise par les monuments modernistes d'Antoni Gaudí, notamment la Sagrada Família. \n population : 46,94 millions (2019)",
+                "photo" : "../image/photos/espagne.jpg" 
+            },
+            {
+                "iso" :"it",
+                "pays" : "Italie",
+                "img" : "../jeu/country-flags-master/png100px/it.png",
+               "coor": [42.46274381389823,12.260602321942747],
+                "desc" : "L'Italie, pays européen bordé par la Méditerranée et l'Adriatique, a laissé une forte empreinte sur la culture et la cuisine occidentales. Sa capitale, Rome, abrite le Vatican ainsi que des trésors artistiques et des ruines antiques. Les autres grandes villes comprennent Florence, avec des chefs-d'œuvre de la Renaissance comme le David de Michel-Ange et le dôme de Brunelleschi, Venise, la ville des canaux, et Milan, la capitale italienne de la mode. \n Population :  60,36 millions (2019)",
+                "photo" : "../image/photos/italie.jpg"
+    
+            },
+            {
+                "iso" :"si",
+                "pays" : "Slovénie",
+                "img" : "../jeu/country-flags-master/png100px/si.png",
+               "coor": [45.8133113,14.4808369],
+                "desc" : "La Slovénie est un pays d’Europe centrale connu pour ses montagnes, ses stations de ski et ses lacs. Sur le lac de Bled, un lac glaciaire alimenté par des sources chaudes, la ville de Bled comporte un îlot sur lequel se dressent une église et un château médiéval à flanc de falaise. Dans la capitale de la Slovénie, Ljubljana, les façades baroques côtoient des monuments du XXe siècle conçus par l'architecte slovène Jože Plečnik, dont l'emblématique Tromostovje (Trois Ponts), qui enjambe la rivière étroite et sinueuse Ljubljanica.population:2,081 millions (2019)",
+                "photo" : "slovenie.jpg"
+    
+            },
+            {
+                "iso" :"hu",
+                "pays" : "Hongrie",
+                "img" : "../jeu/country-flags-master/png100px/hu.png",
+               "coor": [47.1817585,19.5060937],
+                "desc" : "La Hongrie est un pays enclavé d'Europe centrale. Budapest, sa capitale, est traversée par le Danube. Son paysage urbain est parsemé de sites présentant un intérêt architectural : quartier médiéval de la colline du château de Buda, immenses édifices néoclassiques bordant l'avenue Andrássy de Pest, pont suspendu de Széchenyi Lánchíd qui date du XIXe siècle, etc. Les influences turques et romaines sur la culture hongroise se traduisent notamment par la popularité des spas d'eau minérale, par exemple au lac thermal de Hévíz.population:9,773 millions",
+                "photo" : "../image/photos/hongrie.jpg"
+    
+            },
+            {
+                "iso" :"se",
+                "pays" : "Suède",
+                "img" : "../jeu/country-flags-master/png100px/se.png",
+               "coor": [59.6749712,14.5208584],
+                "desc" : "La Suède est un pays scandinave composé de milliers d'îles côtières et lacs intérieurs, ainsi que de vastes forêts boréales et de montagnes glaciaires. Ses villes principales sont toutes côtières : Stockholm, la capitale située à l'est du pays, ainsi que Göteborg et Malmö au sud-ouest. Stockholm est construite sur 14 îles. Elle comprend plus de 50 ponts, une vieille ville médiévale, Gamla stan, des palais royaux et des musées comme celui à ciel ouvert de Skansen.population:10,23 millions (2019)",
+                "photo" : "../image/photos/suede.jpg"
+    
+            },
+            {
+                "iso" :"lt",
+                "pays" : "Lituanie",
+                "img" : "../jeu/country-flags-master/png100px/lt.png",
+               "coor": [55.3500003,23.7499997],
+                "desc" : "La Lituanie est le pays le plus au sud des États baltes. Ancien pays du bloc soviétique, elle est frontalière de la Pologne, la Lettonie et la Biélorussie. Vilnius, la capitale située près de la frontière avec la Biélorussie, est réputée pour sa vieille ville médiévale. Elle présente également une architecture gothique, Renaissance et baroque, ainsi qu'une cathédrale du XVIIIe siècle construite sur le site d'un temple païen. Perchée sur une colline, la tour de Gediminas est un symbole de la ville et du pays offrant une vue sur les alentours.population:2,794 millions 2020",
+                "photo" : "../image/photos/lituanie.jpg"
+    
+            },
+            {
+                "iso" :"pt",
+                "pays" : "Portugal",
+                "img" : "../jeu/country-flags-master/png100px/pt.png",
+               "coor": [40.0332629,-7.8896263],
+                "desc" : "Le Portugal est un pays du sud de l'Europe, sur la péninsule Ibérique, délimité en partie par l'Espagne. Sa situation au bord de l'océan Atlantique a influencé de nombreux aspects de sa culture : la morue salée et les sardines grillées sont des plats nationaux, les plages de l'Algarve sont très prisées et une grande partie de l'architecture du pays date des années 1500 aux années 1800, période pendant laquelle le Portugal était un empire maritime puissant.",
+                "photo" : "../image/photos/portugal.jpg"
+    
+            },
+            {
+                "iso":"ua",
+                "pays" : "Ukraine",
+                "img" : "../jeu/country-flags-master/png100px/ua.png", 
+                "coor" :[47.8753828,31.4146716],
+                "desc" : "L'Ukraine est un vaste pays d'Europe de l'Est réputé pour ses églises orthodoxes, ses côtes longeant la mer Noire et ses montagnes boisées. Sa capitale, Kiev, abrite la cathédrale Sainte-Sophie, surmontée d'un dôme en or et dotées de mosaïques ainsi que de fresques du XIe siècle. Surplombant le Dniepr, la laure des Grottes de Kiev est un vaste monastère et lieu de pèlerinage chrétien qui renferme tombaux, reliques et catacombes scythes où reposent des moines orthodoxes momifiés. population : 41,98 millions (2019)",
+                "photo" : "../image/photos/ukraine.jpg"
+            },
+            {
+                "iso":"pl",
+                "pays" : "Pologne",
+                "img" : "../jeu/country-flags-master/png100px/pl.png", 
+                "coor" :[53.3178,22.97362],
+                "desc" : "La Pologne est un pays d'Europe de l'Est situé au bord de la mer Baltique qui est réputé pour son architecture médiévale et son patrimoine juif. Dans la ville de Cracovie, le château du Wawel datant du XIVe siècle s'élève au-dessus de la vieille ville médiévale abritant la halle aux draps, lieu de commerce de la Renaissance à Rynek Glówny (place du marché). À proximité se trouve le mémorial du camp de concentration d'Auschwitz-Birkenau et la mine de sel de Wieliczka, composée de salles et de tunnels souterrains ,population : 37,97 millions (2019)",
+                "photo" : "../image/photos/pologne.jpg"
+            }
+
+        ]
+    },
+    {
+        "Continent":"Afrique",
+        "Coordonees" :"",
+        "quiz": [{
+            "iso": "dz",
+            "pays":"Algérie",
+            "img": "../jeu/country-flags-master/png100px/dz.png",
+            "coor" :[34.3660796,2.7025089],
+            "desc" : "L'Algérie est un pays nord-africain doté d'un littoral sur la mer Méditerranée et d'un intérieur désertique, le Sahara. De nombreux empires y ont laissé leur marque, comme les anciennes ruines romaines de Tipasa, en bord de mer. Dans la capitale, Alger, des sites ottomans, tels que la mosquée Ketchaoua, datant de 1612 environ, bordent le quartier de la Casbah. Perché sur une colline, cet endroit dispose d'allées étroites et d'escaliers. La basilique Notre-Dame d'Afrique, arborant une architecture néo-byzantine, date de la domination coloniale française ,population : 42,23 millions (2018)",
+            "photo" : "../image/photos/algerie.jpg"
+
+        },
+        {
+            "iso":"ma",
+            "pays" : "Maroc",
+            "img" : "../jeu/country-flags-master/png100px/ma.png",
+            "coor" :[32.0900755,-5.1542384],
+            "desc" : "Le Maroc, pays d'Afrique du Nord sur le littoral de l'Atlantique et de la Méditerranée, se distingue par ses influences berbères, arabes et européennes. La médina de Marrakech, quartier médiéval aux allures de labyrinthe, est un lieu animé, avec sa place Jemaa el-Fna et ses souks (marchés) vendant des céramiques, des bijoux et des lanternes en métal. La casbah des Oudayas à Rabat, la capitale, est un fort royal du XIIe siècle qui surplombe l'océan. population : 36,03 millions (2018)",
+            "photo" : "../image/photos/maroc.jpg"
+        },
+        {
+            "iso":"tn",
+            "pays" : "Tunisie",
+            "img" : "../jeu/country-flags-master/png100px/tn.png",
+            "coor" :[34.265015000000005, 9.071009844254174],
+            "desc" : "La Tunisie est un pays d'Afrique du Nord situé sur la côte méditerranéenne et en bordure du désert du Sahara. Le musée national du Bardo à Tunis, la capitale, expose des pièces archéologiques allant des mosaïques romaines à l'art islamique. Le quartier de la Médina, avec son souk animé, encercle l'imposante mosquée Zitouna. À l'est, sur le site de l'ancienne cité de Carthage, se trouvent les thermes d'Antonin et d'autres ruines, et le musée national de Carthage et ses nombreux objets. population : 11,57 millions (2018)",
+            "photo" : "../image/photos/tunisie.jpg"
+        },
+        {
+            "iso":"sn",
+            "pays":"Sénégale",
+            "img":"../jeu/country-flags-master/png100px/sn.png",
+            "coor": [14.769161171818679,14.41134492099617],
+            "desc": "Le Sénégal est un pays situé sur la côte ouest de l'Afrique et doté d'un héritage colonial français et de nombreuses attractions naturelles. Dakar, la capitale, comprend le quartier historique de la Médina et le célèbre musée Théodore Monod, exposant des œuvres d'art africain. Elle est également réputée pour sa vie nocturne, centrée sur la musique mbalax, originaire du Sénégal. Saint-Louis, ancienne capitale de l'Afrique-Occidentale française, abrite une vieille ville à l'architecture coloniale. population : 16,22 millions (2018)",
+            "photo": "../image/photos/senegale.jpg"
+        },
+        {
+            "iso":"ci",
+            "pays":"Côte d'Ivoire",
+            "img":"../jeu/country-flags-master/png100px/ci.png",
+            "coor": [7.59624294019518,-5.63326874912117],
+            "desc":"La Côte d'Ivoire est un pays d'Afrique de l'Ouest doté de stations balnéaires, de forêts tropicales et d'un patrimoine colonial français. Abidjan, sur la côte Atlantique, est le principal centre urbain du pays. Ses sites modernes regroupent la Pyramide, un édifice en béton faisant penser à une ziggourat. La cathédrale Saint-Paul est une structure inclinée rattachée à une immense croix. Au nord du quartier central des affaires, le parc national du Banco est une réserve de forêt tropicale au sein de laquelle serpentent des chemins de randonnée.population : 25,07 millions (2018)",
+            "photo":"../image/photos/cote_d_ivoire.jpg"
+        },
+        {
+            "iso":"zw",
+            "pays":"Zimbabwe",
+            "img":"../jeu/country-flags-master/png100px/zw.png",
+            "coor":[-19.544660206054854,30.00637968837883],
+            "desc":"Le Zimbabwe est un pays enclavé de l'Afrique australe connu pour ses paysages spectaculaires et sa faune diversifiée, visible en grande partie dans les parcs, les réserves et les espaces de safari. Sur le Zambèze, les chutes Victoria plongent avec fracas d'une hauteur de 108 mètres dans les gorges étroites de Batoka, où il est possible de pratiquer le rafting et le saut à l'élastique. En aval se trouvent les parcs nationaux de Matusadona et de Mana Pools, qui abritent des hippopotames, des rhinocéros et des oiseaux.population : 14,44 millions (2018)",
+            "photo":"../image/photos/zimbabwe.jpg"
+        },
+        {
+            "iso": "ga",
+            "pays": "Gabon",
+            "img": "../jeu/country-flags-master/png100px/ga.png",
+            "coor": [-0.4849839071399105,11.95564315625],
+            "desc": "Le Gabon, pays d'Afrique centrale situé sur la côte atlantique, possède d'importants parcs protégés. Le domaine côtier forestier du célèbre parc national de Loango abrite une faune variée, des gorilles aux hippopotames en passant par les baleines. Le parc national de la Lopé est principalement composé de forêt tropicale. Le parc national d'Akanda est connu pour ses mangroves et ses plages soumises aux marées.population: 2,119 millions (2018)",
+            "photo":"../image/photos/gabon.jpg"
+        },
+        {
+            "iso":"bw",
+            "pays": "Botswana",
+            "img": "../jeu/country-flags-master/png100px/bw.png",
+            "coor": [-21.7609776039009,23.930740812499998],
+            "desc": "Le Botswana est un pays enclavé de l’Afrique australe. Le désert du Kalahari et le delta de l’Okavango recouvrent la majorité de son territoire, et offrent aux animaux une végétation luxuriante pendant les inondations saisonnières. L’immense réserve de chasse du Kalahari central, avec ses vallées fossiles asséchées et ses prairies vallonnées, abrite de nombreuses espèces comme des girafes, des guépards, des hyènes et des chiens sauvages. Les safaris sont une activité très pratiquée au Botswana.population : 2,254 millions (2018) ",
+            "photo": "../image/photos/botswana.jpg"
+        },
+        {
+            "iso": "na",
+            "pays":"Namibie",
+            "img":"../jeu/country-flags-master/png100px/na.png",
+            "coor":[-22.83841244014557,17.448807218749998],
+            "desc":"La Namibie, pays du sud-ouest de l'Afrique, est caractérisée par le désert du Namib, qui longe le littoral de l'Océan Atlantique. Ce pays abrite une faune et une flore diversifiées, dont une importante population de guépards. La capitale, Windhoek, et la ville côtière de Swakopmund comptent des bâtiments de l'époque de la colonisation allemande, comme l'église Christuskirche de Windhoek, construite en 1907. Au nord, le désert de sel du parc national d'Etosha attire le gibier, et notamment les rhinocéros et les girafes.population : 2,448 millions (2018)",
+            "photo": "../image/photos/Namibie.jpg"
+        },
+        {
+            "iso": "zm",
+            "pays":"Zambie",
+            "img":"../jeu/country-flags-master/png100px/na.png",
+            "coor":[-14.648907924380289,28.786697843749998],
+            "desc":"La Zambie, en Afrique australe, est un pays enclavé composé de terres sauvages et d'une faune diversifiée, avec de nombreux parcs et zones de safari. À la frontière avec le Zimbabwe se trouvent les célèbres chutes Victoria (appelées Mosi-oa-Tunya, par les populations locales), qui se jettent d'une hauteur de 108 mètres dans les gorges étroites de Batoka. En aval, le pont des chutes Victoria traverse le Zambèze et offre un point de vue spectaculaire.population: 17,35 millions (2018)",
+            "photo": "../image/photos/zambie.jpg"
+        },
+    ]
+},
+    {
+        "Continent":"Amerique",
+        "Coordonees" :"",
+        "quiz": [{
+            "iso":"br",
+            "pays":"Brésil",
+            "img":"../jeu/country-flags-master/png100px/br.png",
+            "coor":[-10.640471145618902,-51.39164231249997],
+            "desc":"Le Brésil, vaste pays d'Amérique du Sud, s'étend du bassin amazonien au nord à des vignobles et aux chutes d'Iguaçu au sud. La ville de Rio de Janeiro, caractérisée par sa statue du Christ Rédempteur de 38 mètres de haut située au sommet du Corcovado, est réputée pour ses plages très fréquentées de Copacabana et d'Ipanema, ainsi que pour son énorme carnaval animé, avec défilés de chars, costumes flamboyants, et musique et danse samba.population: 209,5 millions (2018)",
+            "photo": "../image/photos/bresil.jpg"
+        },
+        {
+            
+            "iso":"py",
+            "pays":"Paraguay",
+            "img":"../jeu/country-flags-master/png100px/py.png",
+            "coor":[-23.34361732671973,-57.67582199999997],
+            "desc":"Le Paraguay est un pays enclavé situé entre l'Argentine, le Brésil et la Bolivie. Il abrite de vastes régions marécageuses, une forêt subtropicale ainsi que le Chaco, des étendues sauvages composées de savane et de brousse. Sur les rives du fleuve Paraguay, la capitale Asunción comporte l'imposant Palais du Gouvernement et le Museo del Barro, qui expose des céramiques précolombiennes ainsi que des dentelles de Ñandutí. Ces dernières sont vendues dans de nombreux magasins.population:6,956 millions (2018)",
+            "photo": "../image/photos/paraguay.jpg"
+        
+        },
+        {
+            
+            "iso":"ar",
+            "pays":"Argentine",
+            "img":"../jeu/country-flags-master/png100px/ar.png",
+            "coor":[-35.97920616878821,-65.76175949999997],
+            "desc":"L'Argentine est un grand pays d'Amérique du Sud au relief très varié où se côtoient les montagnes des Andes, les lacs glaciaires et la pampa, de grandes plaines de pâturage où paissent les célèbres bovins du pays. L'Argentine est réputée pour le tango et la musique. Au centre de Buenos Aires, la grande capitale cosmopolite, se trouve la place de Mai, bordée de bâtiments datant du XIXe siècle tels que la Casa Rosada (Maison rose), le palais présidentiel à balcon.population:44,49 millions (2018)",
+            "photo": "../image/photos/argentine.jpg"
+        
+        },
+        {
+            
+            "iso":"co",
+            "pays":"Colombie",
+            "img":"../jeu/country-flags-master/png100px/co.png",
+            "coor":[3.8408520985284444,-73.05668137499997],
+            "desc":"La Colombie est un pays situé dans l’extrême nord du continent sud-américain. Son territoire est composé de forêts tropicales, de la cordillère des Andes et d’une multitude de plantations de café. À Bogotá, sa capitale perchée à plus de 2 600 m d’altitude, le quartier de Zona Rosa a établi sa réputation grâce à ses nombreux restaurants et magasins. Carthagène des Indes, sur la côte caribéenne, abrite une vieille ville coloniale entourée de remparts, un château du XVIe siècle et des récifs coralliens.population:49,65 millions (2018)",
+            "photo": "../image/photos/colombie.jpg"
+        
+        },
+        {
+            
+            "iso":"mx",
+            "pays":"Mexique",
+            "img":"../jeu/country-flags-master/png100px/mx.png",
+            "coor":[22.531484038206465,-101.31351731249997],
+            "desc":"Situé entre les États-Unis et l'Amérique centrale, le Mexique est un pays réputé pour ses plages du Pacifique et du golfe du Mexique, ainsi que pour ses paysages variés - entre montagnes, déserts et jungles. Il est pourvu de ruines anciennes comme Teotihuacan et la cité maya de Chichén Itzá ainsi que de villes datant de l'époque coloniale espagnole. Sa capitale Mexico propose un retour à la modernité avec ses boutiques haut de gamme, ses musées renommés et ses restaurants gastronomiques.population:126,2 millions (2018)",
+            "photo": "../image/photos/mexique.jpg"
+        
+        },
+        {
+            
+            "iso":"ca",
+            "pays":"Canada",
+            "img":"../jeu/country-flags-master/png100px/ca.png",
+            "coor":[57.59754024599451,-114.80472824999997],
+            "desc":"Le Canada est un pays nord-américain situé entre les États-Unis au sud et le cercle polaire au nord. Les principales villes sont Toronto, Vancouver, centre du cinéma de la côte ouest, Montréal et Québec, toutes deux francophones, et Ottawa, la capitale. Le Canada compte, parmi ses vastes étendues sauvages, le parc national de Banff avec ses nombreux lacs situé dans les montagnes Rocheuses. Il abrite également les célèbres et majestueuses chutes du Niagara.population:37,59 millions (2019)",
+            "photo": "../image/photos/canada.jpg"
+        
+        },
+        {
+            
+            "iso":"ve",
+            "pays":"Venezuela",
+            "img":"../jeu/country-flags-master/png100px/ve.png",
+            "coor":[7.38278725950217,-66.06937668749997],
+            "desc":"Le Venezuela est un pays de la côte nord de l’Amérique du Sud, aux attractions naturelles variées. Le long de sa côte caribéenne se trouvent des îles tropicales de villégiature, dont l'île Margarita et l'archipel de Los Roques. Au nord-ouest s'étend la cordillère des Andes, et la ville coloniale de Mérida, point de départ des visites du parc national Sierra Nevada. Caracas, la capitale, se situe au nord.population:28,87 millions (2018)",
+            "photo": "../image/photos/venezuela.jpg"
+        
+        },
+        {
+            
+            "iso":"hy",
+            "pays":"Haïti",
+            "img":"../jeu/country-flags-master/png100px/hy.png",
+            "coor":[19.029561457739266,-72.14481614062501],
+            "desc":"Haïti est un pays caribéen situé sur l'île d'Hispaniola, territoire qu'il partage avec la République dominicaine, à l'est. Bien que le séisme de 2010 ait laissé des traces encore visibles, nombre de points d'intérêt du début du XIXe siècle sont toujours intacts, par exemple la citadelle La Ferrière, forteresse surplombant l'île, ou encore les ruines environnantes du palais Sans Souci, ancienne demeure royale de style baroque du roi Henri Ier.population:11,12 millions (2018)",
+            "photo": "../image/photos/haiti.jpg"
+        
+        },
+        {
+            
+            "iso":"uy",
+            "pays":"Uruguay",
+            "img":"../jeu/country-flags-master/png100px/uy.png",
+            "coor":[-33.20316496179634,-56.01688645312501],
+            "desc":"L'Uruguay est un pays d'Amérique du Sud réputé pour son arrière-pays verdoyant et sa côte bordée de plages. Sa capitale Montevideo s'articule autour de la Plaza Independencia, où se dressait autrefois une citadelle espagnole. Elle mène à la Ciudad Vieja (vieille ville) qui est pourvue de bâtiments art déco, de maisons coloniales et du Mercado del Puerto, un ancien marché portuaire avec de nombreux barbecues. La Rambla, une promenade maritime, passe devant des étals de poissons, des jetées et des parcs.population:3,449 millions (2018)",
+            "photo": "../image/photos/uruguay.jpg"
+        
+        },
+        {
+            
+            "iso":"pe",
+            "pays":"Pérou",
+            "img":"../jeu/country-flags-master/png100px/pe.png",
+            "coor":[-10.175833570186754,-75.13309739062501],
+            "desc":"Le Pérou est un pays d'Amérique du Sud couvrant une partie de la forêt amazonienne. C'est là que se trouve le Machu Picchu, ancienne cité inca située en altitude dans les Andes. La région entourant le Machu Picchu, englobant la vallée sacrée, le chemin de l'Inca et la ville coloniale de Cuzco, comporte de nombreux sites archéologiques. Sur la côte pacifique aride du Pérou se trouve Lima, la capitale, comprenant un centre colonial bien conservé et d'importantes collections d'art précolombien.population:31,99 millions (2018) ",
+            "photo": "../image/photos/perou.jpg"
+        
+        },
+              
+    ]
+    },
+        {
+            "Continent":"Oceanie",
+        "Coordonees" :"",
+        "quiz": [{
+
+            "iso":"au",
+            "pays":"Australie",
+            "img":"../jeu/country-flags-master/png100px/au.png",
+            "coor":[-25.395000108751482,134.88155104687496],
+            "desc":"L'Australie est un pays et continent entouré par les océans Indien et Pacifique. Ses principales villes, Sydney, Brisbane, Melbourne, Perth et Adélaïde, sont bâties sur la côte. La capitale, Canberra, est quant à elle située à l'intérieur des terres. Le pays est connu pour l'opéra de Sydney, la Grande Barrière de corail, ses grandes étendues sauvages et désertiques appelées l'Outback, et ses espèces animales uniques comme le kangourou et l'ornithorynque.population:24,99 millions (2018)",
+            "photo": "../image/photos/australie.jpg"
+            },
+
+            {
+
+            "iso":"fj",
+            "pays":"Fidji",
+            "img":"../jeu/country-flags-master/png100px/fj.png",
+            "coor":[-17.844244063037458,178.01387526562496],
+            "desc":"Les Fidji, pays du Pacifique Sud, sont un archipel composé de plus de 300 îles. L'endroit est célèbre pour ses paysages à la beauté sauvage, ses plages bordées de palmiers, ses récifs de corail et ses lagons aux eaux cristallines. Ses principales îles, Viti Levu et Vanua Levu, concentrent la majeure partie de la population. Suva, ville portuaire de style colonial anglais, se trouve sur Viti Levu. Le Fiji Museum, situé dans les jardins de Thurston, qui datent de l'époque victorienne, présente des expositions ethnographiques.population:883 483 (2018)",
+            "photo": "../image/photos/fidji.jpg"
+
+            },
+            {
+
+            "iso":"ki",
+            "pays":"Kiribati",
+            "img":"../jeu/country-flags-master/png100px/ki.png",
+            "coor":[0.4483283,-171.6645388],
+            "desc":"Kiribati, république insulaire dans le Pacifique central, comprend 33 atolls et îles qui s'étendent le long de l'équateur. Avec leurs lagons et leurs plages de sable blanc, nombre d'entre elles sont inhabitées, offrant un cadre reculé idéal pour la pêche, la plongée et l'observation des oiseaux. La capitale surpeuplée de Tarawa-Sud est constituée de petits îlots, abrite des vestiges de la Seconde Guerre mondiale combattue sur ses rives, et est connue pour la danse folklorique et l'artisanat.population : 115 847 (2018)",
+            "photo": "../image/photos/kiribati.jpg"
+
+            },
+            {
+
+            "iso":"nr",
+            "pays":"Nauru",
+            "img":"../jeu/country-flags-master/png100px/nr.png",
+            "coor":[-0.5297629630087719,166.93755632318718],
+            "desc":"Nauru, /na.u.ʁu/, en forme longue la république de Nauru est un État insulaire d'Océanie situé en Micronésie peuplé de 13 649 habitants en 2017 et l'un des plus petits États du monde.population:12 704 (2018)",
+            "photo": "../image/photos/nauru.jpg"
+
+            },
+            {
+
+            "iso":"tv",
+            "pays":"Tuvalu",
+            "img":"../jeu/country-flags-master/png100px/tv.png",
+            "coor":[-7.768959,178.1167698],
+            "desc":"Les Tuvalu /t̪y.va.ly/, en forme longue l'État des Tuvalu, en tuvaluan Tuvalu, en anglais Tuvalu et State of Tuvalu, sont un État et un archipel polynésien, situés dans l'Ouest de l'océan Pacifique Sud,population:11 508 (2018)",
+            "photo": "../image/photos/tuvalu.jpg"
+
+            },
+            {
+
+            "iso":"vu",
+            "pays":"Vanuatu",
+            "img":"../jeu/country-flags-master/png100px/vu.png",
+            "coor":[-16.5255069,168.1069154],
+            "desc":"Le Vanuatu est un pays du sud de l'océan Pacifique composé d'environ 80 îles qui s'étendent sur 1 300 kilomètres. Les visiteurs peuvent y pratiquer la plongée dans des récifs coralliens, des grottes sous-marines et des épaves telles que le navire de transport de troupes SS President Coolidge datant de la Seconde Guerre mondiale. Port-Vila, capitale portuaire et centre économique du pays, se trouve sur l'île d'Éfaté. La ville abrite le musée national du Vanuatu, consacré à la culture mélanésienne du pays.population:292 680 (2018)",
+            "photo": "../image/photos/vanuatu.jpg"
+
+            },
+            {
+
+            "iso":"pw",
+            "pays":"Palaos",
+            "img":"../jeu/country-flags-master/png100px/pw.png",
+            "coor":[6.097367,133.313631],
+            "desc":"Les Palaos sont un archipel de plus de 500 îles situé en Micronésie, dans l'ouest de l'océan Pacifique. L'île de Koror abrite l'ancienne capitale du même nom et constitue le centre commercial de l'archipel. Plus grande, l'île de Babeldaob comprend la capitale actuelle, Ngerulmud, ainsi que des montagnes et des plages de sable sur la côte est. Au nord, les anciens monolithes de basalte de Badrulchau occupent des champs herbeux entourés de palmiers.population:17 907 (2018)",
+            "photo": "../image/photos/palaos.jpg"
+
+            },
+            {
+
+            "iso":"nz",
+            "pays":"Nouvelle-Zélande",
+            "img":"../jeu/country-flags-master/png100px/nz.png",
+            "coor":[-41.5000831,172.8344077],
+            "desc":"La Nouvelle-Zélande est un pays situé au sud-ouest de l'océan Pacifique et composé de 2 îles principales abritant toutes deux des volcans et des glaciers. Le vaste musée national Te Papa Tongarewa se trouve sur l'île du Nord, à Wellington, la capitale. Le mont Victoria ainsi que le Fiordland et les Southern Lakes de l'île du Sud ont servi de décor aux célèbres films de la saga Le Seigneur des anneaux de Peter Jackson.population:4,886 millions (2018)",
+            "photo": "../image/photos/nouvelle_zelande.jpg"
+
+            },
+            {
+
+            "iso":"to",
+            "pays":"Tonga",
+            "img":"../jeu/country-flags-master/png100px/to.png",
+            "coor":[-19.9160819,-175.2026424],
+            "desc":"Le Royaume de Tonga est un État de Polynésie comportant plus de 170 îles du Pacifique Sud. La plupart d'entre elles sont inhabitées, bordées de plages de sable blanc et de récifs coralliens, et recouvertes de forêt tropicale. L'île principale, Tongatapu, est protégée par des lagons et des falaises calcaires. Elle abrite la capitale rurale de Nuku'aloga, ainsi que des stations balnéaires, des plantations et le Ha'amonga 'a Maui, un imposant trilithe en corail datant des années 1200.population:103 197 (2018)",
+            "photo": "../image/photos/tonga.jpg"
+
+            },
+            {
+
+            "iso":"nu",
+            "pays":"Niue",
+            "img":"../jeu/country-flags-master/png100px/to.png",
+            "coor":[-19.0536414,-169.8613411],
+            "desc":"Niue /nju.e/, plus rarement Niué ou Nioué, en anglais Niue, en niuéen Niuē, est un pays insulaire de l’Ouest de l'océan Pacifique sud. Il est situé à 2 400 km au nord-est de la Nouvelle-Zélande, au centre d'un triangle formé par les îles Tonga, Samoa et Cook. population:1 624",
+            "photo": "../image/photos/Niue.jpg"
+
+            },
+
+        
+        ]
+        
+        },
+        {
+             "Continent":"Asie",
+        "Coordonees" :"",
+        "quiz": [
+            {
+
+            "iso":"in",
+            "pays":"Inde",
+            "img":"../jeu/country-flags-master/png100px/in.png",
+            "coor":[22.3511148,78.6677428],
+            "desc":"Immense pays du sud de l'Asie, l'Inde offre un paysage varié, des pics de l'Himalaya au littoral de l'océan Indien. Son histoire remonte à 5 millénaires. Au nord se trouvent des sites datant de l'empire moghol tels que le Fort rouge et l'imposante mosquée Jama Masjid, à Delhi, ainsi que l'emblématique mausolée du Tāj Mahal, à Agra. Les pèlerins viennent faire leurs ablutions dans les eaux du Gange, à Bénarès. Rishikesh est la capitale du yoga, mais aussi le point de départ des randonnées vers l'Himalaya.population:1,353 milliard (2018)",
+            "photo": "../image/photos/inde.jpg"
+
+            },
+            {
+
+            "iso":"ir",
+            "pays":"Iran",
+            "img":"../jeu/country-flags-master/png100px/ir.png",
+            "coor":[32.6475314,54.5643516],
+            "desc":"L'Iran est une République islamique du Golfe persique (arabique) riche de nombreux sites historiques datant de l'Empire persique. D'importantes ruines en marbre caractérisent la ville de Persépolis, capitale de l'Empire fondée par Darius I au VIe siècle avant J.-C. La capitale moderne, Téhéran, abrite l'opulent palais du Golestan, résidence de la dynastie Kadjar (1794–1925), ainsi que des monuments plus modernes comme la tour Milad, haute de 435 m.population:81,8 millions (2018)",
+            "photo": "../image/photos/iran.jpg"
+            
+            },
+            {
+
+            "iso":"jp",
+            "pays":"Japon",
+            "img":"../jeu/country-flags-master/png100px/jp.png",
+            "coor":[36.5748441,139.2394179],
+            "desc":"Le Japon est un pays insulaire situé dans l'océan Pacifique. Il comporte des villes denses, des palais impériaux, des parcs nationaux montagneux ainsi que des milliers de temples et de sanctuaires. Les trains à grande vitesse Shinkansen relient les îles principales de Kyūshū (avec les plages subtropicales d'Okinawa), Honshū (où se trouvent Tokyo et le mémorial en hommage aux victimes du bombardement atomique d'Hiroshima) et Hokkaidō (prisée pour le ski). Tokyo, la capitale, est réputée pour ses gratte-ciel, ses magasins et sa culture populaire.population:126,5 millions (2018)",
+            "photo": "../image/photos/japon.jpg"
+            
+            },
+            {
+
+            "iso":"cn",
+            "pays":"Chine",
+            "img":"../jeu/country-flags-master/png100px/cn.png",
+            "coor":[35.000074,104.999927],
+            "desc":"La Chine est un pays très peuplé d’Asie de l’est. Son territoire immense présente des paysages variés : prairies, déserts, montagnes, lacs, rivières et plus de 14 000 km de littoral. Pékin, la capitale à l’architecture moderne, conserve également des sites historiques, comme le palais de la Cité interdite et la place Tian Anmen. Shanghaï est l'un des plus grands centres financiers mondiaux et comporte de nombreux gratte-ciels. L’emblématique Grande Muraille de Chine partage le nord du pays d’est en ouest.population:1,393 milliard (2018)",
+            "photo": "../image/photos/chine.jpg"
+            
+            },
+            {
+
+            "iso":"mn",
+            "pays":"Mongolie",
+            "img":"../jeu/country-flags-master/png100px/mn.png",
+            "coor":[46.8250388,103.8499736],
+            "desc":"La Mongolie est un pays délimité par la Chine et la Russie. Il est connu pour ses grandes étendues sauvages et sa culture nomade. Oulan-Bator, sa capitale, s'articule autour de la place Gengis Khan, qui porte le nom de l'illustre fondateur de l'Empire mongol des XIIIe et XIVe siècles. La ville comporte aussi le musée national de Mongolie, où sont exposés des objets historiques et ethnographiques, et le monastère restauré de Gandantegchinlin, qui date de 1830.population:3,17 millions (2018)",
+            "photo": "../image/photos/mongolie.jpg"
+            
+            },
+            {
+
+            "iso":"kr",
+            "pays":"Corée du Sud",
+            "img":"../jeu/country-flags-master/png100px/kr.png",
+            "coor":[46.8250388,103.8499736],
+            "desc":"La Corée du Sud, un pays d'Asie de l'Est, occupe la moitié sud de la péninsule de Corée. Elle partage l'une des frontières les plus fortement militarisées du monde avec la Corée du Nord. Elle est également connue pour sa campagne vallonnée et verdoyante parsemée de cerisiers et de temples bouddhistes datant de plusieurs siècles, ainsi que pour les villages de pêcheurs de sa côte, ses îles subtropicales et ses villes high-tech comme Séoul, sa capitale.population:51,64 millions (2018)",
+            "photo": "../image/photos/coree_du_Sud.jpg"
+            
+            },
+            {
+
+            "iso":"th",
+            "pays":"Thaïlande",
+            "img":"../jeu/country-flags-master/png100px/th.png",
+            "coor":[14.8971921,100.83273],
+            "desc":"La Thaïlande est un pays d'Asie du Sud-Est. Elle est réputée pour ses plages tropicales, ses palais royaux opulents, ses ruines anciennes et ses temples ornés présentant des statues de Bouddha. À Bangkok, la capitale, un paysage urbain ultramoderne côtoie des communautés tranquilles au bord des canaux et les emblématiques temples de Wat Arun, Wat Pho et Wat Phra Kaeo (temple du Bouddha d'émeraude). Les stations balnéaires situées à proximité comprennent la dynamique Pattaya et la ville branchée de Hua Hin.population:69,43 millions (2018)",
+            "photo": "../image/photos/thailande.jpg"
+            
+            },
+            {
+
+            "iso":"la",
+            "pays":"Laos",
+            "img":"../jeu/country-flags-master/png100px/la.png",
+            "coor":[20.0171109,103.378253],
+            "desc":"Le Laos est un pays d'Asie du Sud-Est traversé par le Mékong et réputé pour son terrain montagneux, son architecture coloniale française, ses campements des tribus des collines et ses monastères bouddhistes. Vientiane, la capitale, abrite le monument That Luang, où un reliquaire contiendrait le sternum de Bouddha, ainsi que le monument aux morts de Patuxai et le Talat Sao (marché du matin), complexe regorgeant de stands de nourriture, de vêtements et d'objets artisanaux.population:7,062 millions (2018)",
+            "photo": "../image/photos/laos.jpg"
+            
+            },
+            {
+
+            "iso":"ph",
+            "pays":"Philippines",
+            "img":"../jeu/country-flags-master/png100px/ph.png",
+            "coor":[12.7503486,122.7312101],
+            "desc":"Les Philippines sont un pays d'Asie du Sud-Est, à l'ouest du Pacifique, comptant plus de 7 000 îles. Manille, sa capitale, est célèbre pour ses promenades au bord de l'océan et son quartier chinois datant de plusieurs siècles, Binondo. Intramuros, cœur de la vieille ville, était une ville fortifiée à l'époque coloniale. Ce quartier abrite l'église baroque du XVIIe siècle Saint-Augustin et le Fort Santiago, une prison militaire et citadelle de plusieurs étages.population:106,7 millions (2018)",
+            "photo": "../image/photos/philippines.jpg"
+            
+            },
+            {
+
+            "iso":"lb",
+            "pays":"Liban",
+            "img":"../jeu/country-flags-master/png100px/lb.png",
+            "coor":[33.8750629,35.843409],
+            "desc":"Le Liban, en forme longue la République libanaise, est un pays du Proche-Orient. En grande partie montagneux, il partage ses frontières avec la Syrie au nord et à l'est sur 376 km, Israël au sud sur 79 km et, au large de ses 220 km de côtes dans le bassin levantin à l'ouest, avec Chypre. Beyrouth en est la capitale.population:6,849 millions (2018)",
+            "photo": "../image/photos/liban.jpg"
+            
+            },
+        ]
+        }
+    ]
+
+
+    
+        
+    
+    
+
+

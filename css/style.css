@@ -1,0 +1,38 @@
+body{
+    
+    background: url(../image/c1b.jpg);
+    color: white;
+    background-attachment:fixed;
+    
+}
+
+
+.col-md-6{
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    border-width:1px;
+    border-style: solid;
+    border-color:rgb(255, 255, 255);
+    background-color: black;
+    background: black;
+
+}
+
+.login-g{
+    background-color: rgba(255, 255, 255, 0.05);
+    padding : 30px; /*met une genre de marge autour de la box utile pour ne pas avoir des bors coloré*/
+    background: rgba(0, 0, 0, 0.514);
+}
+
+.login-d{
+    background-color: rgba(255, 255, 255, 0.08);
+    padding : 30px;
+    background: rgba(0, 0, 0, 0.514);
+}
+
+.form-control{
+    color: white;
+    background-color: transparent;
+}
+
